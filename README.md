@@ -43,6 +43,14 @@ The analysis uses geographically aggregated data from this dataset.
 - Wine and spirit purchases peaked in December.
 - Purchasing behaviour varied across London boroughs.
 
+![Monthly beverage purchasing trends](images/seasonal-purchasing-trends.png)
+
+*Monthly beverage purchasing indicators show contrasting seasonal patterns between tea/coffee and beer.*
+
+![Borough-level alcohol purchasing heatmaps](images/borough-alcohol-trends.png)
+
+*Regional and seasonal purchasing patterns, normalised relative to each product category's maximum.*
+
 ### Nutrition and Educational Attainment
 
 | Purchasing indicator | Reported correlation |
@@ -53,6 +61,21 @@ The analysis uses geographically aggregated data from this dataset.
 | Sugar | −0.22 |
 
 These findings represent exploratory area-level associations rather than causal relationships.
+
+<p align="center">
+  <img src="images/fibre-vs-gcse.png" alt="Fibre purchasing indicator versus educational attainment" width="48%">
+  <img src="images/fruits-veg-vs-gcse.png" alt="Fruit and vegetable purchasing indicator versus educational attainment" width="48%">
+</p>
+
+*Original coursework scatter plots showing positive area-level associations. The attainment measures and purchase indicators should not be interpreted as individual dietary or causal effects.*
+
+## Communicating Findings to a Non-Technical Audience
+
+An infographic designed to communicate the exploratory findings and related nutritional research to students in an accessible format.
+
+<p align="center">
+  <img src="images/infographic.png" alt="Does Diet Impact Education? Student-facing infographic" width="600">
+</p>
 
 ## Potential Business Applications
 
