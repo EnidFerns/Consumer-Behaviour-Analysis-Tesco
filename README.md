@@ -1,6 +1,6 @@
 # Consumer Behaviour Analysis — Tesco Grocery 1.0
 
-An exploratory data analysis project investigating seasonal grocery purchasing patterns, geographical variations in consumer behaviour and associations between nutritional purchasing patterns and educational attainment across Greater London.
+A Python-based exploratory data analysis project investigating seasonal grocery purchasing patterns, regional consumer behaviour and area-level associations between nutritional purchasing indicators and educational attainment across Greater London.
 
 **University of Bath | MSc Data Science | Applied Data Science**
 
@@ -18,7 +18,7 @@ The Tesco Grocery 1.0 dataset represents:
 - 17 food categories
 - Grocery purchases across Greater London during 2015
 
-The analysis uses geographically aggregated data from this dataset.
+These figures describe the original dataset. This project analyses geographically aggregated monthly and annual grocery statistics, not individual transactions.
 
 **Data sources:**
 - [Tesco Grocery 1.0 — Scientific Data](https://www.nature.com/articles/s41597-020-0397-7)
@@ -53,14 +53,20 @@ The analysis uses geographically aggregated data from this dataset.
 
 ### Nutrition and Educational Attainment
 
-| Purchasing indicator | Reported correlation |
-|---|---:|
-| Fruits and vegetables | +0.49 |
-| Fibre | +0.47 |
-| Carbohydrates | −0.26 |
-| Sugar | −0.22 |
+| Purchasing indicator | Educational outcome | Pearson r |
+|---|---|---:|
+| Fruits and vegetables | GCSE | +0.330 |
+| Fruits and vegetables | EBacc | +0.490 |
+| Fibre | GCSE | +0.470 |
+| Poultry | GCSE | −0.574 |
+| Red meat | GCSE | −0.491 |
+| Carbohydrates | EBacc | −0.474 |
+| Sugar | EBacc | −0.216 |
+| Energy | EBacc | −0.462 |
 
-These findings represent exploratory area-level associations rather than causal relationships.
+GCSE attainment refers to the percentage of pupils achieving five or more A*–C grades including English and mathematics; EBacc attainment refers to the percentage achieving the English Baccalaureate.
+
+These findings represent exploratory borough-level associations rather than causal relationships. Confidence intervals and formal significance tests have not been reported.
 
 <p align="center">
   <img src="images/fibre-vs-gcse.png" alt="Fibre purchasing indicator versus educational attainment" width="48%">
@@ -79,11 +85,13 @@ An infographic designed to communicate the exploratory findings and related nutr
 
 ## Potential Business Applications
 
-- Seasonal demand analysis
-- Inventory planning
-- Regional product assortment
-- Promotional campaign planning
-- Consumer behaviour insights
+| Finding | Potential retail action |
+|---|---|
+| Contrasting seasonal beer and tea/coffee patterns | Investigate seasonal replenishment and promotional calendars. |
+| December peaks in wine and spirits | Evaluate festive stock planning and campaign timing. |
+| Borough-level variation in purchasing | Explore local assortment and region-specific promotions. |
+
+These are hypotheses for commercial decision-making, not validated interventions or sales forecasts. Current sales, pricing, weather and promotional data would be needed before operational deployment.
 
 ## Limitations
 
@@ -96,10 +104,28 @@ An infographic designed to communicate the exploratory findings and related nutr
 
 ## Repository Contents
 
-- [ads_work.ipynb](ads_work.ipynb) — Exploratory data analysis and visualisations.
+| Resource | Description |
+|---|---|
+| [tesco_retail_analysis.ipynb](tesco_retail_analysis.ipynb) | Seasonal and geographical grocery purchasing analysis. |
+| [food_education_analysis.ipynb](food_education_analysis.ipynb) | Borough-level grocery and educational data integration, Pearson correlations and visualisations. |
+| [data/](data/) | Grocery aggregates, educational attainment data and geographic lookup files. |
+| [images/](images/) | Selected charts and the original student-facing infographic. |
+
+## Getting Started
+
+Use Python 3 and Jupyter Notebook. Clone the repository and open the notebooks from the repository root so that relative data paths resolve correctly.
+
+```bash
+git clone https://github.com/EnidFerns/Consumer-Behaviour-Analysis-Tesco.git
+cd Consumer-Behaviour-Analysis-Tesco
+python -m pip install jupyter pandas matplotlib seaborn openpyxl
+jupyter notebook
+```
+
+The packages above cover the reviewed food and education notebook; additional dependencies may be required for the retail notebook. Run the cells in order. The environment is not version-pinned, and a fresh end-to-end run has not been verified.
 
 ## Future Improvements
 
 - Incorporate socioeconomic indicators.
-- Investigate statistical significance and potential confounding variables.
+- Report sample sizes, confidence intervals and sensitivity to outliers; investigate potential confounding variables and multiple comparisons.
 - Develop an interactive dashboard for regional and seasonal purchasing analysis.
