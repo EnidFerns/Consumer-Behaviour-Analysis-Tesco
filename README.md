@@ -6,11 +6,11 @@ A Python-based exploratory data analysis project investigating seasonal grocery 
 
 ## Project Overview
 
-This project explores the Tesco Grocery 1.0 dataset alongside UK government educational attainment statistics to identify purchasing trends and investigate potential relationships between nutrition and academic performance.
+This project explores the Tesco Grocery 1.0 dataset alongside UK government educational attainment statistics to identify purchasing trends and investigate associations between grocery purchasing indicators and educational attainment.
 
 ## Datasets
 
-The Tesco Grocery 1.0 dataset represents:
+The original Tesco Grocery 1.0 dataset covers:
 
 - 420 million transactions
 - 1.6 million Tesco Clubcard users
@@ -40,7 +40,7 @@ These figures describe the original dataset. This project analyses geographicall
 
 - Beer purchases increased during warmer months, while tea and coffee purchases were generally higher during colder months.
 - Beer and tea/coffee purchasing patterns exhibited a negative correlation of −0.49.
-- Wine and spirit purchases peaked in December.
+- Purchases of wine and spirits peaked in December.
 - Purchasing behaviour varied across London boroughs.
 
 ![Monthly beverage purchasing trends](images/seasonal-purchasing-trends.png)
@@ -51,7 +51,7 @@ These figures describe the original dataset. This project analyses geographicall
 
 *Regional and seasonal purchasing patterns, normalised relative to each product category's maximum.*
 
-### Nutrition and Educational Attainment
+### Grocery Purchasing and Educational Attainment
 
 | Purchasing indicator | Educational outcome | Pearson r |
 |---|---|---:|
@@ -73,7 +73,7 @@ These findings represent exploratory borough-level associations rather than caus
   <img src="images/fruits-veg-vs-gcse.png" alt="Fruit and vegetable purchasing indicator versus educational attainment" width="48%">
 </p>
 
-*Original coursework scatter plots showing positive area-level associations. The attainment measures and purchase indicators should not be interpreted as individual dietary or causal effects.*
+*Scatter plots from the original analysis showing positive area-level associations. The attainment measures and purchase indicators should not be interpreted as individual dietary or causal effects.*
 
 ## Communicating Findings to a Non-Technical Audience
 
@@ -91,7 +91,7 @@ An infographic designed to communicate the exploratory findings and related nutr
 | December peaks in wine and spirits | Evaluate festive stock planning and campaign timing. |
 | Borough-level variation in purchasing | Explore local assortment and region-specific promotions. |
 
-These are hypotheses for commercial decision-making, not validated interventions or sales forecasts. Current sales, pricing, weather and promotional data would be needed before operational deployment.
+These are hypotheses for commercial decision-making, not validated interventions or sales forecasts. Current sales, pricing, weather and promotional data would be needed before implementing these recommendations.
 
 ## Limitations
 
@@ -108,7 +108,7 @@ These are hypotheses for commercial decision-making, not validated interventions
 |---|---|
 | [tesco_retail_analysis.ipynb](tesco_retail_analysis.ipynb) | Seasonal and geographical grocery purchasing analysis. |
 | [food_education_analysis.ipynb](food_education_analysis.ipynb) | Borough-level grocery and educational data integration, Pearson correlations and visualisations. |
-| [data/](data/) | Grocery aggregates, educational attainment data and geographic lookup files. |
+| [data/](data/) | Aggregated grocery purchasing data, educational attainment data and geographic lookup files. |
 | [images/](images/) | Selected charts and the original student-facing infographic. |
 
 ## Getting Started
@@ -122,9 +122,9 @@ python -m pip install jupyter pandas matplotlib seaborn openpyxl
 jupyter notebook
 ```
 
-The packages above cover the reviewed food and education notebook; additional dependencies may be required for the retail notebook. Run the cells in order. The environment is not version-pinned, and a fresh end-to-end run has not been verified.
+The packages above cover the food and education notebook; additional dependencies may be required for the retail notebook. Run the cells in order. The environment is not version-pinned, and a fresh end-to-end run has not been verified.
 
-## Future Improvements
+## Future Work
 
 - Incorporate socioeconomic indicators.
 - Report sample sizes, confidence intervals and sensitivity to outliers; investigate potential confounding variables and multiple comparisons.
