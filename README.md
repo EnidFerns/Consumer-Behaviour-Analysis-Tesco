@@ -1,4 +1,4 @@
-# Consumer Behaviour Analysis — Tesco Grocery 1.0
+# Retail Analytics & Consumer Purchasing Behaviour
 
 A Python-based exploratory data analysis project investigating seasonal grocery purchasing patterns, regional consumer behaviour and area-level associations between nutritional purchasing indicators and educational attainment across Greater London.
 
@@ -32,7 +32,6 @@ These figures describe the original dataset. This project analyses geographicall
 - Literature-driven hypothesis formulation
 - Correlation analysis
 - Statistical visualisation
-- Data storytelling for technical and non-technical audiences
 
 ## Key Findings
 
@@ -121,11 +120,3 @@ cd Consumer-Behaviour-Analysis-Tesco
 python -m pip install jupyter pandas matplotlib seaborn openpyxl
 jupyter notebook
 ```
-
-The packages above cover the food and education notebook; additional dependencies may be required for the retail notebook. Run the cells in order. The environment is not version-pinned, and a fresh end-to-end run has not been verified.
-
-## Future Work
-
-- Incorporate socioeconomic indicators.
-- Report sample sizes, confidence intervals and sensitivity to outliers; investigate potential confounding variables and multiple comparisons.
-- Develop an interactive dashboard for regional and seasonal purchasing analysis.
